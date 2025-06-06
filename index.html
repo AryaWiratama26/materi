@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Pembelajaran Arya Wiratama</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Catatan Pembelajaran</h1>
+            <p>Materi dan Catatan belajar pribadi</p>
+        </div>
+
+        <div class="sidebar">
+            <h3>📖 Daftar Materi</h3>
+            
+            <div class="chapter">
+                <div class="chapter-title" onclick="toggleChapter('chapter1')">
+                    <span>Aljabar Linear</span>
+                    <span class="chapter-arrow">▶</span>
+                </div>
+                <div class="subchapter-list" id="chapter1">
+                    <div class="subchapter" onclick="showContent('aljabar-operasi-dasar')">
+                        Operasi Dasar Matriks
+                    </div>
+                    <div class="subchapter" onclick="showContent('aljabar-determinan')">
+                        Determinan dan Invers
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="chapter">
+                <div class="chapter-title" onclick="toggleChapter('chapter2')">
+                    <span>Kalkulus</span>
+                    <span class="chapter-arrow">▶</span>
+                </div>
+                <div class="subchapter-list" id="chapter2">
+                    <div class="subchapter" onclick="showContent('kalkulus-limit')">
+                        Limit dan Kontinuitas
+                    </div>
+                    <div class="subchapter" onclick="showContent('kalkulus-turunan')">
+                        Turunan
+                    </div>
+                    <div class="subchapter" onclick="showContent('kalkulus-integral')">
+                        Integral
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="chapter">
+                <div class="chapter-title" onclick="toggleChapter('chapter3')">
+                    <span>Statistika</span>
+                    <span class="chapter-arrow">▶</span>
+                </div>
+                <div class="subchapter-list" id="chapter3">
+                    <div class="subchapter" onclick="showContent('stat-deskriptif')">
+                        Statistika Deskriptif
+                    </div>
+                    <div class="subchapter" onclick="showContent('stat-probabilitas')">
+                        Probabilitas
+                    </div>
+                    <div class="subchapter" onclick="showContent('stat-distribusi')">
+                        Distribusi Probabilitas
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="content">
+            <div id="welcome" class="note-section active">
+                <div class="welcome-page">
+                    <div class="welcome-icon">📖</div>
+                    <h2>Selamat Datang!</h2>
+                    <p>Pilih bab dan sub-bab dari menu navigasi di sebelah kiri untuk melihat catatan pembelajaran.</p>
+                    <p>Setiap sub-bab berisi foto-foto catatan yang dapat diperbesar dengan mengkliknya.</p>
+                    <p><i>Arya Wiratama</i></p>
+                </div>
+            </div>
+
+            <!-- Aljabar Linear - Operasi Dasar Matriks -->
+            <div id="aljabar-operasi-dasar" class="note-section">
+                <div class="page-header">
+                    <h2>Operasi Dasar Matriks</h2>
+                    <div class="breadcrumb">Aljabar Linear > Operasi Dasar Matriks</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Penjumlahan, Perkalian, Trace, Transpose</h4>
+                        <p>-</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 1.jpg" alt="Penjumlahan Matriks">
+                                <div class="note-caption">Penjumlan dan Perkalian skalar Matriks</div>
+                            </div>
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 2.jpg" alt="Perkalian Matriks">
+                                <div class="note-caption">Perkalian Matriks</div>
+                            </div>
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 3.jpg" alt="Trance dan Transpose">
+                                <div class="note-caption">Trace dan Transpose Part 1</div>
+                            </div>
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 4.jpg" alt="Trance dan Transpose">
+                                <div class="note-caption">Trace dan Transpose Part 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-item">
+                        <h4>Latihan Dasar Operasi Matriks</h4>
+                        <p>-</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 5.jpg" alt="Latihan Dasar">
+                                <div class="note-caption">Latihan Dasar Part 1</div>
+                            </div>
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="/assets/img/Day 1 - Pic 6.jpg" alt="Latihan Dasar">
+                                <div class="note-caption">Latihan Dasar Part 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aljabar Linear - Determinan -->
+            <!-- <div id="aljabar-determinan" class="note-section">
+                <div class="page-header">
+                    <h2>Determinan dan Invers</h2>
+                    <div class="breadcrumb">Aljabar Linear > Determinan dan Invers</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Perhitungan Determinan</h4>
+                        <p>Metode perhitungan determinan untuk matriks 2x2 dan 3x3.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/d4c5a9/2c2c2c?text=Determinan+2x2" alt="Determinan 2x2">
+                                <div class="note-caption">Determinan matriks 2x2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Template untuk sub-bab lainnya -->
+            <div id="aljabar-eigen" class="note-section">
+                <div class="page-header">
+                    <h2>Nilai dan Vektor Eigen</h2>
+                    <div class="breadcrumb">Aljabar Linear > Nilai dan Vektor Eigen</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Konsep Eigenvalue dan Eigenvector</h4>
+                        <p>Pengenalan konsep nilai eigen dan vektor eigen.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/e8e4d8/2c2c2c?text=Konsep+Eigen" alt="Konsep Eigen">
+                                <div class="note-caption">Definisi eigenvalue dan eigenvector</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kalkulus sections -->
+            <div id="kalkulus-limit" class="note-section">
+                <div class="page-header">
+                    <h2>Limit dan Kontinuitas</h2>
+                    <div class="breadcrumb">Kalkulus > Limit dan Kontinuitas</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Definisi Limit</h4>
+                        <p>Pemahaman konsep limit fungsi dan notasinya.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/f0eee6/2c2c2c?text=Definisi+Limit" alt="Definisi Limit">
+                                <div class="note-caption">Definisi formal limit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tambahkan section lainnya dengan pola yang sama -->
+            <!-- <div id="kalkulus-turunan" class="note-section">
+                <div class="page-header">
+                    <h2>Turunan</h2>
+                    <div class="breadcrumb">Kalkulus > Turunan</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Aturan Dasar Turunan</h4>
+                        <p>Rumus-rumus dasar dalam menghitung turunan fungsi.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/d4c5a9/2c2c2c?text=Aturan+Turunan" alt="Aturan Turunan">
+                                <div class="note-caption">Aturan dasar diferensiasi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kalkulus-integral" class="note-section">
+                <div class="page-header">
+                    <h2>Integral</h2>
+                    <div class="breadcrumb">Kalkulus > Integral</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Integral Tak Tentu</h4>
+                        <p>Konsep dan teknik dasar integral tak tentu.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/e8e4d8/2c2c2c?text=Integral+Tak+Tentu" alt="Integral Tak Tentu">
+                                <div class="note-caption">Rumus integral tak tentu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Statistika sections
+            <div id="stat-deskriptif" class="note-section">
+                <div class="page-header">
+                    <h2>Statistika Deskriptif</h2>
+                    <div class="breadcrumb">Statistika > Statistika Deskriptif</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Ukuran Pemusatan Data</h4>
+                        <p>Mean, median, dan modus sebagai ukuran pemusatan.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/f0eee6/2c2c2c?text=Ukuran+Pemusatan" alt="Ukuran Pemusatan">
+                                <div class="note-caption">Rumus mean, median, modus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stat-probabilitas" class="note-section">
+                <div class="page-header">
+                    <h2>Probabilitas</h2>
+                    <div class="breadcrumb">Statistika > Probabilitas</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Konsep Dasar Probabilitas</h4>
+                        <p>Definisi dan aturan dasar dalam probabilitas.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/d4c5a9/2c2c2c?text=Konsep+Probabilitas" alt="Konsep Probabilitas">
+                                <div class="note-caption">Definisi dan rumus probabilitas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stat-distribusi" class="note-section">
+                <div class="page-header">
+                    <h2>Distribusi Probabilitas</h2>
+                    <div class="breadcrumb">Statistika > Distribusi Probabilitas</div>
+                </div>
+                <div class="notes-container">
+                    <div class="note-item">
+                        <h4>Distribusi Normal</h4>
+                        <p>Karakteristik dan penggunaan distribusi normal.</p>
+                        <div class="note-images">
+                            <div class="note-image" onclick="openModal(this)">
+                                <img src="https://via.placeholder.com/300x200/e8e4d8/2c2c2c?text=Distribusi+Normal" alt="Distribusi Normal">
+                                <div class="note-caption">Kurva distribusi normal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Modal for image preview -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
